@@ -13,5 +13,13 @@ What if values repeat? What would you do to handle that?
 =end
 
 def invert_hash(my_hash)
-  
+  result = Hash.new
+
+  my_hash.each do |key, value|
+    result[value] = key
+  end
+  result
 end
+
+p my_hash
+p invert_hash(my_hash)
